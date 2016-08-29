@@ -1,0 +1,1 @@
+SELECT COUNT (Employee.EmployeeId), Employee.Firstname || ' ' || Employee.LastName AS 'SalesAgent' FROM Invoice JOIN Customer ON Customer.CustomerId == Invoice.CustomerId JOIN Employee ON Employee.EmployeeId == Customer.SupportRepId GROUP BY Employee.EmployeeId 

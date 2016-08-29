@@ -1,0 +1,1 @@
+SELECT COUNT (MediaType.Name), MediaType.Name FROM InvoiceLine Join Track ON Track.TrackId == InvoiceLine.TrackId JOIN MediaType ON MediaType.MediaTypeId == Track.MediaTypeId Group BY MediaType.Name ORDER BY COUNT (MediaType.Name) DESC LIMIT 3

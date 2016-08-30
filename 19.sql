@@ -1,0 +1,1 @@
+SELECT COUNT(Employee.EmployeeId), Employee.FirstName || ' ' || Employee.LastName AS 'EmployeeName' FROM Invoice JOIN Customer ON Customer.CustomerId == Invoice.CustomerId JOIN Employee ON Employee.EmployeeId == Customer.SupportRepId WHERE strftime('%Y', InvoiceDate) == '2009' GROUP BY EmployeeId ORDER BY COUNT(Employee.EmployeeId) DESC LIMIT 1

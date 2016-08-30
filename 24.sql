@@ -1,0 +1,1 @@
+SELECT Count(Track.Name), Track.Name FROM InvoiceLine Join Invoice ON Invoice.InvoiceId == InvoiceLIne.InvoiceId Join Track ON Track.TrackId == InvoiceLine.TrackId WHERE strftime('%Y', InvoiceDate) == '2013' Group BY Track.Name ORDER BY COUNT(Track.Name) DESC LIMIT 1

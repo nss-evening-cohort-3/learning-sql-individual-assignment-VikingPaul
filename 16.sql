@@ -1,1 +1,1 @@
-SELECT Title, Genre.Name AS 'Genre', MediaType.Name AS 'MediaType' FROM Track JOIN Album ON Album.AlbumId == Track.AlbumId JOIN MediaType ON MediaType.MediaTypeId == Track.MediaTypeId JOIN Genre ON Genre.GenreId == Track.GenreId
+SELECT Track.Name, Title, Genre.Name AS 'Genre', MediaType.Name AS 'MediaType' FROM Track JOIN Album ON Album.AlbumId == Track.AlbumId JOIN MediaType ON MediaType.MediaTypeId == Track.MediaTypeId JOIN Genre ON Genre.GenreId == Track.GenreId
